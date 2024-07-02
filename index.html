@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Recipe page</title>
+
+  <style>
+
+    body {
+      background-color: #E7D7CD;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+     }
+
+    .container {
+      width: 250px;
+      height: 558px;
+      border: 10px;
+      border-radius: 10px;
+      background-color: white;
+      padding: 15px;
+    }
+
+    img {
+      height: 105px;
+      width: 250px;
+      border: 10px;
+      border-radius: 5px;
+
+      
+    }
+
+    .heading {
+      display: flex;
+      font-family: "Young Serif", serif;
+      font-weight: 100;
+      font-style: normal;
+      font-size: 16px;
+      margin-top: -17px;
+      color: #3f3844;
+    }
+
+    .para>p {
+      font-family: "Outfit", sans-serif;
+      font-style: normal;
+      font-size: 6px;
+      color: grey;
+      margin-top: -17px;
+      font-weight: 300;
+    }
+
+    .prep {
+      background-color: #F9EBEA;
+      height: 63px;
+      width: 250px;
+      border: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      font-family: "Outfit", sans-serif;
+      font-style: normal;
+    }
+
+    .prep>p {
+      color: #83204e;
+      font-weight: 600;
+      font-size: 7px;
+      font-family: "Outfit", sans-serif;
+      font-style: normal;
+      padding: 8px;
+    }
+
+    .preplist {
+      color: grey;
+      font-size: 6px;
+      font-weight: 400;
+      padding-top: 30px;
+      padding-left: 18px;
+    }
+
+    .prep>p,
+    .preplist {
+      margin-bottom: -40px;
+    }
+
+    .ing>h5 {
+      color: #79443B;
+      font-family: "Young Serif", serif;
+      font-weight: 100;
+      font-style: normal;
+      font-size: 10px;
+      font-weight: lighter;
+      padding-top: 14px;
+    }
+
+    .inglist {
+      color: grey;
+      font-family: "Outfit", sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 6px;
+      padding-left: 10px;
+    }
+
+    .ing>h5,
+    .inglist {
+      margin-bottom: 10px;
+      margin-top: -5px;
+    }
+
+    hr {
+      border-top: 1px;
+    }
+
+    .inst>h5 {
+      color: #79443B;
+      font-family: "Young Serif", serif;
+      font-weight: 100;
+      font-style: normal;
+      font-size: 10px;
+      padding-top: 12px;
+    }
+
+    .instlist {
+      font-family: "Outfit", sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      padding-left: 10px;
+      font-size: 6px;
+      padding-right: 14px;
+      color: grey;
+    }
+
+    ul li {
+      margin-bottom: 4px;
+    }
+
+    ol li {
+      margin-bottom: 4px;
+    }
+
+    li::marker {
+      color: #79443B;
+    }
+
+
+    .inst>h5,
+    .instlist {
+      margin-top: -10px;
+    }
+
+    .nut>h5 {
+      color: #79443B;
+      font-family: "Young Serif", serif;
+      font-weight: 100;
+      font-style: normal;
+      font-size: 10px;
+      padding-top: 12px
+    }
+
+    .thetab {
+      color: grey;
+      font-family: "Outfit", sans-serif;
+      font-style: normal;
+      font-size: 6px;
+    }
+
+    .nut>h5,
+    .thetab {
+      margin-top: -10px;
+    }
+
+    .nuttab {
+      font-family: "Outfit", sans-serif;
+      font-style: normal;
+      font-size: 6px;
+      font-weight: 300;
+      color: grey;
+      padding-top: 1px;
+    }
+
+    .cal {
+      word-spacing: 89px;
+      margin-left: 12px;
+    }
+
+    .car {
+      word-spacing: 96px;
+      margin-left: 11px;
+    }
+
+    .pro {
+      word-spacing: 93px;
+      margin-left: 11px;
+    }
+
+    .fat {
+      word-spacing: 103px;
+      margin-left: 11px;
+    }
+
+    .calf {
+      color: #79443B;
+      font-weight: 600;
+    }
+
+    .carf {
+      color: #79443B;
+      font-weight: 600;
+    }
+
+    .prof {
+      color: #79443B;
+      font-weight: 600;
+    }
+
+    .fatf{
+      color: #79443B;
+      font-weight: 600;
+    }
+
+    @media only screen and (max-width: 375px) {
+      .container {
+       width: 121px;
+       height: 630px;
+       border: 10px;
+       background-color: white;
+       padding: 0px;
+       border-radius: 0px;
+    }
+
+    img {
+      height: 60px;
+      width: 121px;
+      border: 10px;
+      border-radius: 0px;
+    }
+
+    .heading {
+      display: flex;
+      font-family: "Young Serif", serif;
+      font-weight: 100;
+      font-style:normal;
+      font-size: 11px;
+      padding: 10px;
+      margin-top: -17px;
+      color: #454545;
+      font-weight: lighter;
+      line-height: 1;
+    }
+
+    .para>p {
+      font-family: "Outfit", sans-serif;
+      font-style: normal;
+      font-size: 5px;
+      color: grey;
+      margin-right: 3px;
+      padding: 10px;
+      font-weight: 400;
+      margin-top: -30px;   
+    }
+
+    .prep {
+      background-color: #F9EBEA;
+      height: 60px;
+      width: 97px;
+      border: 1px;
+      padding-top: 1px;
+      border-radius: 3px;
+      font-family: "Outfit", sans-serif;
+      font-style: normal;
+      margin-left: 10px;
+      margin-top: -5px;
+    }
+
+    .prep>p {
+      color: #83204e;
+      font-weight: 600;
+      font-size: 7px;
+      font-family: "Outfit", sans-serif;
+      font-style: normal;
+      padding-top: 10px;
+      margin-top: -5px;
+    }
+
+    .preplist {
+      color: grey;
+      font-size: 5px;
+      font-weight: 300;
+      /* padding: 10px; */
+      padding-left: 20px;
+      padding-right: 20px;
+      /* padding-top: -px; */
+    }
+
+    li::marker {
+      color: #79443B;
+    }
+
+    .ing>h5 {
+      color: #79443B;
+      font-family: "Young Serif", serif;
+      font-weight: 100;
+      font-style: normal;
+      font-size: 9px;
+      font-weight: lighter;
+      margin-top: px;
+      margin-left: 10px;
+    }
+
+    .inglist {
+      color: grey;
+      font-family: "Outfit", sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 6px;
+      padding-left: 20px;
+      margin-top: px;
+    }
+
+    hr {
+      border-top: 1px;
+      width: 98px;
+    }
+
+    .inst>h5 {
+      color: #79443B;
+      font-family: "Young Serif", serif;
+      font-weight: 100;
+      font-style: normal;
+      margin-left: 10px;
+      font-size: 9px;
+      padding-top: 7px;
+      margin-top: -6px;
+    }
+
+    .instlist {
+      font-family: "Outfit", sans-serif;
+      font-style: normal;
+      font-weight: lighter;
+      font-weight: 300;
+      padding-left: 18px;
+      padding-right: 14px;
+      font-size: 5px;
+      color: grey;
+      margin-top: -9px; 
+    }
+
+    ol li {
+      margin-bottom: 4px;
+    }
+
+    ul li {
+      margin-bottom: 4px;
+    }
+    
+    .nut>h5 {
+      color: #79443B;
+      font-family: "Young Serif", serif;
+      font-weight: 100;
+      font-style: normal;
+      margin-left: 10px;
+      font-size: 10px;
+      padding-top: 7px;
+    }
+
+    .thetab {
+      color: grey;
+      font-family: "Outfit", sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      padding-right: 15px;
+      font-size: 5px;
+      padding-left: 10px;
+
+    }
+
+    .nut>h5,
+    .thetab {
+      margin-top: -9px;
+    }
+
+    .nuttab {
+      font-family: "Outfit", sans-serif;
+      font-style: normal;
+      font-size: 6px;
+      font-weight: 400;
+      color: grey;     
+      margin-top: -3px;
+    }
+
+    .cal {
+      word-spacing: 20px;
+      margin-left: 20px;
+    }
+
+    .car {
+      word-spacing: 27px;
+      margin-left: 20px;
+    }
+
+    .pro {
+      word-spacing: 24px;
+      margin-left: 20px;
+    }
+
+    .fat {
+      word-spacing: 34px;
+      margin-left: 20px;
+    }
+
+    .calf {
+      color: #79443B;
+      font-weight: 600;
+    }
+
+    .carf {
+      color: #79443B;
+      font-weight: 600;
+    }
+
+    .prof {
+      color: #79443B;
+      font-weight: 600;
+    }
+
+    .fatf{
+      color: #79443B;
+      font-weight: 600;
+    }
+  }
+
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <img src="assets/images/image-omelette.jpeg">
+      <div class="heading">
+        <h4>Simple Omelette Recipe</h4>
+      </div>
+      <div class="para">
+        <p>An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to
+          perfection, optionally filled with your choice of cheese, vegetables, or meats.</P>
+      </div>
+      <div class="prep">
+        <p>Preparation time</p>
+        <div>
+        <ul class="preplist">
+          <li style="padding-left: 4px;"><strong>Total</strong>: Approximately 10 minutes</li>
+          <li style="padding-left: 4px;"><strong>preparation</strong>: 5 minutes</li>
+          <li style="padding-left: 4px;"><strong>Cooking</strong>: 5 minutes</li>
+        </ul>
+      </div>
+      </div>
+      <div class="ing">
+        <h5>Ingredients</h5>
+        <ul class="inglist">
+          <li style="padding-left: 4px;">2-3 large eggs</li>
+          <li style="padding-left: 4px;">Salt, to taste</li>
+          <li style="padding-left: 4px;">Pepper, to taste</li>
+          <li style="padding-left: 4px;">1 tablespoon of butter or oil</li>
+          <li style="padding-left: 4px;">Optional fillings: cheese, diced vegetables, cooked meat, herbs</li>
+      </div>
+      <hr width="240px">
+      <div class="inst">
+        <h5>Instructions</h5>
+        <ol class="instlist">
+          <li style="padding-left: 4px;"><strong>Beat the eggs</strong>: In a bowl, beat the eggs with a pinch of salt
+            and pepper until they are
+            well mixed. You can add a tablespoon of water or milk for a fluffier texture.</li>
+          <li style="padding-left: 4px;"><strong>Heat the pan</strong>: Place a non-stick frying pan over medium heat
+            and add butter or oil</li>
+          <li style="padding-left: 4px;"><strong>Cook the omelette</strong>: Once the butter is melted and bubbling,
+            pour in the eggs. Tilt the pan to ensure
+            the eggs evenly coat the surface.</li>
+          <li style="padding-left: 4px;"><strong>Add fillings (optional)</strong>: When the eggs begin to set at the
+            edges but are still slightly runny in the
+            middle, sprinkle your chosen fillings over one half of the omelette.</li>
+          <li style="padding-left: 4px;"><strong>Fold and serve</strong>: As the omelette continues to cook, carefully
+            lift one edge and fold it over the
+            fillings. Let it cook for another minute, then slide it onto a plate.</li>
+          <li style="padding-left: 4px;"><strong>Enjoy:</strong>: Serve hot, with additional salt and pepper if needed.
+          </li>
+        </ol>
+        <hr width="240px">
+        <div class="nut">
+          <h5>Nutrition</h5>
+        </div>
+        <div class="thetab">
+          <p>The table below shows nutritional values per serving without the additional fillings.</p>
+        </div>
+        <div class="nuttab">
+        <p>
+          <span class="cal">Calories </span>
+          <span class="calf">277kcal</span>
+          <hr width="240px">
+          <span class="car">Carbs </span>
+          <span class="carf">0g</span>
+          <hr width="240px">
+          <span class="pro">Protein </span>
+          <span class="prof">20g</span>
+          <hr width="240px">
+          <span class="fat">Fat </span>
+          <span class="fatf">22g</span>
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+</body>
+
+</html>
